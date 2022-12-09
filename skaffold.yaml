@@ -36,10 +36,6 @@ build:
     context: src/paymentservice
   - image: currencyservice
     context: src/currencyservice
-  - image: cartservice
-    context: src/cartservice/src
-    docker:
-      dockerfile: Dockerfile
   - image: frontend
     context: src/frontend
   - image: adservice
@@ -47,7 +43,7 @@ build:
   tagPolicy:
     gitCommit: {}
   local:
-    useBuildkit: false
+    useBuildkit: true
 manifests:
   kustomize:
     paths:

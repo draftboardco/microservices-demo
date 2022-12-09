@@ -100,7 +100,6 @@ section_close
 
 section_open "Testing Online Boutique's services are running"
     evalTest "kubectl get deployment adservice --no-headers -o=name 2> /dev/null"  "deployment.apps/adservice"
-    evalTest "kubectl get deployment cartservice --no-headers -o=name 2> /dev/null"  "deployment.apps/cartservice"
     evalTest "kubectl get deployment checkoutservice --no-headers -o=name 2> /dev/null"  "deployment.apps/checkoutservice"
     evalTest "kubectl get deployment currencyservice --no-headers -o=name 2> /dev/null"  "deployment.apps/currencyservice"
     evalTest "kubectl get deployment emailservice --no-headers -o=name 2> /dev/null"  "deployment.apps/emailservice"

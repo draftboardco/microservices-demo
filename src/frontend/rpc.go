@@ -55,8 +55,8 @@ func (fe *frontendServer) getProduct(ctx context.Context, id string) (*pb.Produc
 }
 
 func (fe *frontendServer) getCart(ctx context.Context, userID string) ([]*pb.CartItem, error) {
-	resp, err := pb.NewCartServiceClient(fe.cartSvcConn).GetCart(ctx, &pb.GetCartRequest{UserId: userID})
-	return resp.GetItems(), err
+    var resp []*pb.CartItem
+	return resp, nil
 }
 
 func (fe *frontendServer) emptyCart(ctx context.Context, userID string) error {
